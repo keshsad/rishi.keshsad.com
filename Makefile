@@ -16,10 +16,18 @@ templ-install:
 			exit 1; \
 		fi; \
 	fi
+
+templ-watch: templ-install
+	@echo "Watching Templ files..."
+	@templ generate -watch
+
 tailwind-install:
-	
-	@if [ ! -f tailwindcss ]; then curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.10/tailwindcss-macos-x64 -o tailwindcss; fi
+	@if [ ! -f tailwindcss ]; then curl -sL https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64 -o tailwindcss; fi
 	@chmod +x tailwindcss
+
+tailwind-watch: tailwind-install
+	@echo "Watching Tailwind files..."
+	@./tailwindcss -i cmd/web/styles/input.css -o cmd/web/assets/css/output.css --watch
 
 build: tailwind-install templ-install
 	@echo "Building..."
@@ -40,6 +48,7 @@ test:
 clean:
 	@echo "Cleaning..."
 	@rm -f main
+	@rm -f tailwindcss
 
 # Live Reload
 watch:
