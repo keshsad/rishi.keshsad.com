@@ -1,0 +1,12 @@
+package pages
+
+import "go-templ-tailwind-htmx-chi-air-make-0.0.1/cmd/web/layouts"
+
+templ HelloPage() {
+	@layouts.Base() {
+		<div class="w-full h-full max-w-sm mx-auto flex justify-between items-center">
+			<p>hello page</p>
+			<p class="underline"><a href="/test">test</a></p>
+		</div>
+	}
+}
