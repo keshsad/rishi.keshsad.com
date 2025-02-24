@@ -10,8 +10,10 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
 	"go-templ-tailwind-htmx-chi-air-make-0.0.1/cmd/web"
+	"go-templ-tailwind-htmx-chi-air-make-0.0.1/cmd/web/pages"
 )
 
+// a ServeMux replacing DefaultServeMux
 func (s *Server) RegisterRoutes() http.Handler {
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
@@ -24,12 +26,12 @@ func (s *Server) RegisterRoutes() http.Handler {
 		MaxAge:           300,
 	}))
 
-	r.Get("/", s.HelloWorldHandler)
+	r.Get("/", templ.Handler(pages.IndexPage()).ServeHTTP)
 
 	fileServer := http.FileServer(http.FS(web.Files))
 	r.Handle("/assets/*", fileServer)
-	r.Get("/web", templ.Handler(web.HelloForm()).ServeHTTP)
-	r.Post("/hello", web.HelloWebHandler)
+	r.Get("/hello", templ.Handler(pages.HelloPage()).ServeHTTP)
+	r.Get("/test", s.HelloWorldHandler)
 
 	return r
 }
