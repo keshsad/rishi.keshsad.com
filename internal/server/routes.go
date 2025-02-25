@@ -9,8 +9,8 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
-	"pro-site-0.0.3/cmd/web"
-	"pro-site-0.0.3/cmd/web/pages"
+	"github.com/keshsad/rishi.keshsad.com/cmd/web"
+	"github.com/keshsad/rishi.keshsad.com/cmd/web/pages"
 )
 
 // a ServeMux replacing DefaultServeMux

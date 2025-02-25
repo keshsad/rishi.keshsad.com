@@ -1,12 +1,12 @@
 package pages
 
-import "pro-site-0.0.3/cmd/web/layouts"
+import "github.com/keshsad/rishi.keshsad.com/cmd/web/layouts"
 
 templ HelloPage() {
-	@layouts.Base() {
-		<div class="w-full h-full max-w-sm mx-auto flex justify-between items-center">
-			<p>hello page</p>
-			<p class="underline"><a href="/test">test</a></p>
-		</div>
-	}
+@layouts.Base() {
+<div class="w-full h-full max-w-sm mx-auto flex justify-between items-center">
+	<p>hello page</p>
+	<p class="underline"><a href="/test">test</a></p>
+</div>
+}
 }

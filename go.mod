@@ -1,4 +1,4 @@
-module pro-site-0.0.3
+module github.com/keshsad/rishi.keshsad.com
 
 go 1.24.0
 

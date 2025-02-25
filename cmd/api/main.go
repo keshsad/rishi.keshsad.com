@@ -9,7 +9,7 @@ import (
 	"syscall"
 	"time"
 
-	"pro-site-0.0.3/internal/server"
+	"github.com/keshsad/rishi.keshsad.com/internal/server"
 )
 
 func gracefulShutdown(apiServer *http.Server, done chan bool) {
