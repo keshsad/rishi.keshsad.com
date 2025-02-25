@@ -49,6 +49,7 @@ clean:
 	@echo "Cleaning..."
 	@rm -f main
 	@rm -f tailwindcss
+	@find . -name "*_templ.go" -type f -delete
 
 # Live Reload
 watch:
