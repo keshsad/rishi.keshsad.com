@@ -25,6 +25,7 @@ watch:
 	air
 
 build: templ-install tailwind-install
+	@go mod tidy
 	@templ generate
 	@./tailwindcss -i cmd/web/styles/input.css -o cmd/web/assets/css/output.css
 	@go build -o main cmd/api/main.go
