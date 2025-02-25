@@ -1,6 +1,6 @@
-# Project go-templ-tailwind-htmx-chi-air-make-0.0.1
+# gottham
 
-One Paragraph of project description goes here
+Gottham is a simple performant stack to make Go web application with chi, templ, tailwind, and htmx.
 
 ## Getting Started
 
