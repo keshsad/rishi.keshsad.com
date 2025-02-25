@@ -37,6 +37,7 @@ watch:
 
 # --- BUILD TARGET ---
 build: templ-install templ-generate tailwind-install tidy # Added tidy step, moved templ-generate earlier
+	which templ
 	@./tailwindcss -i cmd/web/styles/input.css -o cmd/web/assets/css/output.css
 	@go build -o main cmd/api/main.go
 
