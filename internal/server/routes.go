@@ -9,8 +9,8 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
-	"go-templ-tailwind-htmx-chi-air-make-0.0.1/cmd/web"
-	"go-templ-tailwind-htmx-chi-air-make-0.0.1/cmd/web/pages"
+	"pro-site-0.0.3/cmd/web"
+	"pro-site-0.0.3/cmd/web/pages"
 )
 
 // a ServeMux replacing DefaultServeMux

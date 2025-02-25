@@ -9,7 +9,7 @@ import (
 	"syscall"
 	"time"
 
-	"go-templ-tailwind-htmx-chi-air-make-0.0.1/internal/server"
+	"pro-site-0.0.3/internal/server"
 )
 
 func gracefulShutdown(apiServer *http.Server, done chan bool) {

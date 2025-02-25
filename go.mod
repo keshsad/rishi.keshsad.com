@@ -1,4 +1,4 @@
-module go-templ-tailwind-htmx-chi-air-make-0.0.1
+module pro-site-0.0.3
 
 go 1.23.4
 
