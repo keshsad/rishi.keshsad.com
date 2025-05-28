@@ -1,0 +1,130 @@
+package pages
+
+import "github.com/keshsad/monorepo/apps/rishi/cmd/web/layouts"
+
+templ Home() {
+	@layouts.Base() {
+		<div id="home-container" class="h-full max-w-sm mx-auto p-10 md:max-w-md">
+			<div class="flex-row h-full w-full">
+				<h2
+					class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors dark:border-[#312F3B]"
+				>
+					Rishikesh Sadanandan
+				</h2>
+				<p class="mt-6 leading-7">
+					I'm Rishi, a full-stack developer and former student-founder that cares about the craft of developing
+					product.
+				</p>
+				<blockquote class="mt-6 border-l-2 dark:border-[#312F3B] pl-6 italic">
+					The web is a place to learn and contribute, but it means nothing without
+					<a
+						class="text-[#57949F] dark:text-[#9CCFD8] hover:underline"
+						href="https://x.com/keshsad/status/1922756853072556332"
+					>
+						the people
+					</a>
+					who make it so.
+				</blockquote>
+				<p class="mt-6 leading-7">
+					Nearly
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/everything">
+						everything I know
+					</a> is due to them.
+				</p>
+				<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Bio</h3>
+				<p class="mt-6 leading-7">
+					I founded my first company at 18 through the
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://iventure.illinois.edu">
+						iVenture Accelerator
+					</a> at Urbana-Champaign. There, I saw web
+					development as the
+					perfect vessel to bring products to life.
+				</p>
+				<p class="mt-6 leading-7">
+					Beyond tech, I’m a writer and
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/artist">
+						full-stack producer and vocal artist
+					</a>.
+					I bring a multifaceted perspective and personal level of craft to everything I do.
+				</p>
+				<p class="mt-4 leading-7 text-sm text-[#8F7AA9] dark:text-[#C4A7E7]">
+					<a class="hover:underline" href="https://github.com/keshsad">GitHub</a> ◦
+					<a class="hover:underline" href="https://linkedin.com/in/rishikesh-sadanandan">LinkedIn</a> ◦
+					<a class="hover:underline" href="mailto:rishi@keshsad.com">Email</a> ◦
+					<a class="hover:underline" href="https://bsky.app/profile/keshsad.com">Bluesky</a> ◦
+					<a class="hover:underline" href="https://x.com/keshsad">X</a>
+				</p>
+				<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Work</h3>
+				<p class="mt-6 leading-7">
+					This isn't a
+					<a
+						class="text-[#57949F] dark:text-[#9CCFD8] hover:underline"
+						href="https://store.keshsad.com/resume/resume.pdf"
+						target="_blank"
+					>
+						resume
+					</a>, but rather a living record of my learning and building.
+				</p>
+				<p class="mt-6 leading-7"><b>Current</b></p>
+				<ul class="mt-4 ml-6 list-disc">
+					<li class="mt-2 ml-2">
+						<a
+							class="text-[#57949F] dark:text-[#9CCFD8] hover:underline"
+							href="https://site.keshsad.com/professional"
+						>
+							Professional site
+						</a> { `for early-stage companies and startup founders looking to hire` }
+					</li>
+					<li class="mt-2 ml-2">
+						<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/personal">
+							Personal site
+						</a> { `to contribute to the web` }
+					</li>
+					<li class="mt-2 ml-2">
+						<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/stoic">
+							Journal app
+						</a> { `trained on ancient stoic philosophy for modern knowledge workers` }
+					</li>
+				</ul>
+				<p class="mt-6 leading-7"><b>Past</b></p>
+				<ul class="mt-4 ml-6 list-disc">
+					<li class="mt-2 ml-2">
+						<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/poetic">
+							Poetic AI, Inc
+						</a>, a lyrical copilot helping artists overcome writer's block
+					</li>
+					<li class="mt-2 ml-2">
+						<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/founder">
+							iV8
+						</a>, as a student-founder building Poetic
+					</li>
+					<li class="mt-2 ml-2">
+						<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/fellow">
+							iV9
+						</a>, on the leadership team stewarding events
+					</li>
+					<li class="mt-2 ml-2">
+						<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/intern">
+							AvidXchange
+						</a>, made an error intercepting sidesheet as a software engineering intern
+					</li>
+				</ul>
+				<p class="mt-6 mb-10 leading-7">
+					I'm planning future ideas like a
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/college">
+						college app
+					</a> to guide my sister to write essays, a
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/job">
+						job manager
+					</a> to help my dad's company work faster, a
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/music">
+						music app
+					</a> to empower keyboard-centric power users, and a
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://site.keshsad.com/os">
+						personal OS
+					</a>.
+				</p>
+			</div>
+		</div>
+	}
+}

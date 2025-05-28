@@ -1,0 +1,19 @@
+package layouts
+
+templ Base() {
+	<!DOCTYPE html>
+	<html lang="en" class="h-screen">
+		<head>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width,initial-scale=1"/>
+			<title>rishi.keshsad.com</title>
+			<link href="assets/css/output.css" rel="stylesheet"/>
+			<script src="assets/js/htmx.min.js"></script>
+		</head>
+		<body class="bg-[#FAF4ED] dark:bg-[#191724]">
+			<main>
+				{ children... }
+			</main>
+		</body>
+	</html>
+}
