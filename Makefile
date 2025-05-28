@@ -19,7 +19,8 @@ templ-install:
 	fi
 
 tailwind-install:
-	@if [ ! -f tailwindcss ]; then curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.10/tailwindcss-macos-x64 -o tailwindcss; fi
+	# @if [ ! -f tailwindcss ]; then curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.10/tailwindcss-macos-x64 -o tailwindcss; fi
+	@if [ ! -f tailwindcss ]; then curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v4.1.8/tailwindcss-macos-arm64 -o tailwindcss; fi
 	@chmod +x tailwindcss
 
 render:
@@ -32,10 +33,17 @@ copy-assets:
 	@mkdir -p dist/assets
 	@cp -r cmd/web/assets/* dist/assets/
 
-build: tailwind-install templ-install render copy-assets
+build: tailwind-install
+	@echo "Generating HTML..."
+	@go run github.com/a-h/templ/cmd/templ@latest generate
+	@echo "Rendering HTML..."
+	@go run cmd/render/main.go
 	@echo "Compiling styles..."
 	@./tailwindcss -i cmd/web/styles/input.css -o cmd/web/assets/css/output.css
-	@echo "Building binary..."
+	@echo "Assembling assets..."
+	@mkdir -p dist/assets
+	@cp -r cmd/web/assets/* dist/assets/
+	@echo "Building..."
 	@go build -o main cmd/api/main.go
 
 worker:
