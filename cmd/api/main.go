@@ -9,7 +9,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/keshsad/monorepo/apps/rishi/internal/server"
+	"github.com/keshsad/rishi.keshsad.com/internal/server"
 )
 
 func gracefulShutdown(apiServer *http.Server, done chan bool) {
