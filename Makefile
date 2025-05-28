@@ -42,11 +42,12 @@ worker:
 	@echo "Starting deployment..."
 	@echo "Installing tailwindcss..."
 	@curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v4.1.8/tailwindcss-linux-x64 -o tailwindcss
-	@echo "Installing templ..."
-	@go install github.com/a-h/templ/cmd/templ@latest
+	@chmod +x tailwindcss
 	@echo "Generating HTML..."
-	@templ generate
-	@echo "Compiling styles..."
+	@go run github.com/a-h/templ/cmd/templ@latest generate
+	@echo "Rendering HTML..."
+	@go run cmd/render/main.go
+	@echo "Compiling CSS..."
 	@./tailwindcss -i cmd/web/styles/input.css -o cmd/web/assets/css/output.css
 	@echo "Assembling assets..."
 	@mkdir -p dist/assets
