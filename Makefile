@@ -38,6 +38,21 @@ build: tailwind-install templ-install render copy-assets
 	@echo "Building binary..."
 	@go build -o main cmd/api/main.go
 
+worker:
+	@echo "Starting deployment..."
+	@echo "Installing tailwindcss..."
+	@curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v4.1.8/tailwindcss-linux-x64 -o tailwindcss
+	@echo "Installing templ..."
+	@go install github.com/a-h/templ/cmd/templ@latest
+	@echo "Generating HTML..."
+	@templ generate
+	@echo "Compiling styles..."
+	@./tailwindcss -i cmd/web/styles/input.css -o cmd/web/assets/css/output.css
+	@echo "Assembling assets..."
+	@mkdir -p dist/assets
+	@cp -r cmd/web/assets/* dist/assets/
+	@echo "Done!"
+
 # Run the application
 run:
 	@go run cmd/api/main.go
