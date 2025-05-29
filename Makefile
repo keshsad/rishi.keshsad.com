@@ -23,8 +23,9 @@ tailwind-install:
 	@chmod +x tailwindcss
 
 render:
+	@echo "Generating HTML..."
+	@go run github.com/a-h/templ/cmd/templ@latest generate
 	@echo "Rendering HTML..."
-	@templ generate
 	@go run cmd/render/main.go
 
 copy-assets:
@@ -32,11 +33,7 @@ copy-assets:
 	@mkdir -p dist/assets
 	@cp -r cmd/web/assets/* dist/assets/
 
-build: tailwind-install
-	@echo "Generating HTML..."
-	@go run github.com/a-h/templ/cmd/templ@latest generate
-	@echo "Rendering HTML..."
-	@go run cmd/render/main.go
+build: tailwind-install render
 	@echo "Compiling styles..."
 	@./tailwindcss -i cmd/web/styles/input.css -o cmd/web/assets/css/output.css
 	@echo "Assembling assets..."
@@ -44,16 +41,13 @@ build: tailwind-install
 	@cp -r cmd/web/assets/* dist/assets/
 	@echo "Building..."
 	@go build -o main cmd/api/main.go
+	@echo "Done!"
 
-worker:
+worker: render
 	@echo "Starting deployment..."
 	@echo "Installing tailwindcss..."
 	@curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v4.1.8/tailwindcss-linux-x64 -o tailwindcss
 	@chmod +x tailwindcss
-	@echo "Generating HTML..."
-	@go run github.com/a-h/templ/cmd/templ@latest generate
-	@echo "Rendering HTML..."
-	@go run cmd/render/main.go
 	@echo "Compiling CSS..."
 	@./tailwindcss -i cmd/web/styles/input.css -o cmd/web/assets/css/output.css
 	@echo "Assembling assets..."
