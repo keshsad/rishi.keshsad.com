@@ -21,6 +21,7 @@ templ-install:
 tailwind-install:
 	@if [ ! -f tailwindcss ]; then curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v4.1.8/tailwindcss-macos-arm64 -o tailwindcss; fi
 	@chmod +x tailwindcss
+	@echo "Installed tailwindcss"
 
 render:
 	@echo "Generating HTML..."
