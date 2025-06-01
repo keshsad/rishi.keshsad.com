@@ -3,87 +3,121 @@ package pages
 import "github.com/keshsad/rishi.keshsad.com/cmd/web/layouts"
 
 templ Artist() {
-@layouts.Base("Artist | Rishi") {
-<div id="home-container" class="h-full max-w-sm mx-auto p-10 md:max-w-md">
-	<div class="flex-row h-full w-full">
-		<h2
-			class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors border-gray-200 dark:border-[#312F3B]">
-			Full-Stack Artist
-		</h2>
-		<p class="mt-6 leading-7">
-			I've been a fan of music since 2016. Since college, I've also become a producer and vocal artist.
-		</p>
-		<p class="mt-6 leading-7">
-			A <i>full-stack artist</i>, if you will.
-		</p>
-		<p class="mt-6 leading-7">
-			Many people tout music libraries spanning every genre. I'm different. I pride myself on my depth. At some
-			points, I've spent thousands of minutes per week on exploring trap and underground rap.
-		</p>
-		<p class="mt-6 leading-7">
-			It wasn't until
-			college, after meeting a couple producers and rappers, that I
-			realized how <i>accessible </i> music could be.
-		</p>
-		<p class="mt-6 leading-7">
-			That curiosity and willingness to experiment became my driving force. First in
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/poetic") }>
-				founding Poetic
-			</a>, then in web development, and quickly in music too.
-		</p>
-		<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Why music?</h3>
-		<p class="mt-6 leading-7">
-			For me, music is another creative stack to master. It's where art meets technology — the same principles I
-			use
-			building products.
-		</p>
-		<p class="mt-6 leading-7">
-			Creating something from scratch is inherently personal, whether it's code or beats. Product development
-			taught me to share unfinished work, learn in public, and keep iterating. The best products and songs come
-			from people who aren't afraid to <i>try</i> and <i>fail</i>.
-		</p>
-		<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Influences</h3>
-		<p class="mt-6 leading-7">
-			My sound draws from melodic trap, and internet-era producers. There's too many to list,
-			{ "but Yung Fazo and Lil Uzi have been on repeat." }
-		</p>
-		<p class="mt-6 leading-7">
-			What's more intriguing is how transparent artists have become. Even reclusive creators now hop on
-			livestreams with young producers — recording, experimenting, having fun.
-		</p>
-		<p class="mt-6 leading-7">
-			Viewers see their favorites in
-			action: Lancey, Skepta, Quavo, Nino Paid, Ian, and many others. Raw studio sessions are just fun moments.
-		</p>
-		<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Listen & Collaborate</h3>
-		<p class="mt-6 leading-7">
-			I've got a collection of tracks and beats to share. But instead of rushing to streaming platforms, I'm
-			building my own music hosting setup.
-		</p>
-		<p class="mt-6 leading-7">
-			I'm planning to build a
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/music") }>
-				keyboard-centric music app
-			</a> { "for power users and producers." }
-		</p>
-		<p class="mt-6 leading-7">
-			It takes effort, but I control the experience.
-			My music will come to streaming, but not until I improve my systems.
-		</p>
-		<p class="mt-6 leading-7">
-			Until then, reach me on
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("https://x.com/keshsad") }>
-				Twitter
-			</a> to find updates, or any of my socials to collaborate.
-		</p>
-		<p class="mt-4 leading-7 text-sm text-[#8F7AA9] dark:text-[#C4A7E7]">
-			<a class="hover:underline" href={ templ.URL("https://github.com/keshsad") }>GitHub</a> ◦
-			<a class="hover:underline" href={ templ.URL("https://linkedin.com/in/rishikesh-sadanandan") }>LinkedIn</a> ◦
-			<a class="hover:underline" href={ templ.URL("mailto:rishi@keshsad.com") }>Email</a> ◦
-			<a class="hover:underline" href={ templ.URL("https://bsky.app/profile/keshsad.com") }>Bluesky</a> ◦
-			<a class="hover:underline" href={ templ.URL("https://x.com/keshsad") }>X</a>
-		</p>
-	</div>
-</div>
-}
+	@layouts.Base("Artist | Rishi") {
+		<div id="home-container" class="h-full max-w-sm mx-auto p-10 md:max-w-md">
+			<div class="flex-row h-full w-full">
+				<h2
+					class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors border-gray-200 dark:border-[#312F3B]"
+				>
+					Full-Stack Artist
+				</h2>
+				<p class="mt-6 leading-7">
+					I've been a fan of music since 2016. Since college, I've also become a producer and vocal artist.
+				</p>
+				<p class="mt-6 leading-7">
+					A <i>full-stack artist</i>, if you will.
+				</p>
+				<p class="mt-6 leading-7">
+					Many people tout music libraries spanning every genre. I'm different. I pride myself on my depth. At some
+					points, I've spent thousands of minutes per week exploring trap and underground rap.
+				</p>
+				<p class="mt-6 leading-7">
+					It wasn't until
+					college, after meeting a couple producers and rappers, that I
+					realized how <i>accessible </i> music could be.
+				</p>
+				<p class="mt-6 leading-7">
+					That curiosity and willingness to experiment became my driving force. First in
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/poetic") }>
+						founding Poetic
+					</a>, then in mastering app development, and quickly in music too.
+				</p>
+				<p class="mt-6 leading-7">
+					It was actually through customer discovery that I met the rapper who properly
+					introduced me to the music industry.
+				</p>
+				<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Why music?</h3>
+				<p class="mt-6 leading-7">
+					For me, music is another creative stack to master. It's where art meets technology — the same principles I
+					use
+					building products.
+				</p>
+				<p class="mt-6 leading-7">
+					Creating something from scratch is inherently personal, whether it's software or music. Product development
+					taught me to share unfinished work, learn in public, and keep iterating. The best products and songs come
+					from people who aren't afraid to <i>try</i> and <i>fail</i>.
+				</p>
+				<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Listen & Collaborate</h3>
+				<p class="mt-6 leading-7">
+					I've got a collection of tracks and beats to share. But instead of rushing to streaming platforms, I'm
+					building my own music hosting setup.
+				</p>
+				<p class="mt-6 leading-7">
+					I'm planning to build a
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/music") }>
+						keyboard-centric music app
+					</a> { "for power users and producers." }
+				</p>
+				<p class="mt-6 leading-7">
+					It takes effort, but I control the experience.
+					My music will come to streaming, but not until I improve my systems.
+				</p>
+				<p class="mt-6 leading-7">
+					Until then, reach me on
+					<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("https://x.com/keshsad") }>
+						Twitter
+					</a> to find updates, or any of my socials to collaborate.
+				</p>
+				<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Influences</h3>
+				<p class="mt-6 leading-7">
+					My sound draws from melodic trap and internet-era producers. There's too many to list,
+					{ "but Lil Uzi, Nino Paid, and Yung Fazo have been on repeat." }
+				</p>
+				<p class="mt-6 leading-7">
+					And, there’s never been a better time to
+					learn about music from the best.
+				</p>
+				<p class="mt-6 leading-7">
+					Today, music enthusiasts can see their favorites in
+					action. Fans can watch raw studio sessions and be
+					part of unforgettable moments. This has never been possible before.
+				</p>
+				<p class="mt-6 leading-7">
+					It's intriguing to see how open artists have become. Even the most reclusive are now
+					joining
+					livestreams with young creators like 21
+					Savage, Lil Baby, and Lil Uzi, just to name a few.
+				</p>
+				<p class="mt-6 leading-7">
+					Double platinum certified rapper <em>DDG</em> began his journey with content creation and picked up
+					music as a fun hobby. Now, he consistently livestreams to his fans, where all the tracks on his latest album
+					titled <em>blame the chat</em> were recorded live.
+				</p>
+				<p class="mt-6 leading-7">
+					Additionally, <i>PlaqueBoyMax</i> livestreams everyday in 2025. He's well known for his series "Song Wars"
+					and "In the Booth" where rappers come on to chat and rap. Quavo, Ian, Rob49, Lancey, Skepta, Nemzzz, Jace,
+					have already joined the trend.
+				</p>
+				<p class="mt-6 leading-7">
+					His debut solo album <i>FIVEFOREVER</i> garnered
+					1.6 million streams on Spotify first day and #1 on US Apple Music's Hip-Hop/Rap chart.
+				</p>
+				<p class="mt-6 leading-7">
+					Music is the long-term game, and content is leverage.
+				</p>
+				<p class="mt-6 leading-7">
+					I'm not highly trained in the musical arts, but the road to becoming highly practiced is clear. Just like in
+					programming,
+					these are skills that are learnable. Enjoyable. Playable. These are long-term games.
+				</p>
+				<p class="mt-4 leading-7 text-sm text-[#8F7AA9] dark:text-[#C4A7E7]">
+					<a class="hover:underline" href={ templ.URL("https://github.com/keshsad") }>GitHub</a> ◦
+					<a class="hover:underline" href={ templ.URL("https://linkedin.com/in/rishikesh-sadanandan") }>LinkedIn</a> ◦
+					<a class="hover:underline" href={ templ.URL("mailto:rishi@keshsad.com") }>Email</a> ◦
+					<a class="hover:underline" href={ templ.URL("https://bsky.app/profile/keshsad.com") }>Bluesky</a> ◦
+					<a class="hover:underline" href={ templ.URL("https://x.com/keshsad") }>X</a>
+				</p>
+			</div>
+		</div>
+	}
 }
