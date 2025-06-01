@@ -16,8 +16,8 @@ templ Home() {
 		</p>
 		<blockquote class="mt-6 border-l-2 border-gray-200 dark:border-[#312F3B] pl-6 italic">
 			The web is a place to learn and contribute, but it means nothing without
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline"
-				href="https://x.com/keshsad/status/1922756853072556332">
+			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={
+				templ.URL("https://x.com/keshsad/status/1922756853072556332") }>
 				the people
 			</a>
 			who make it so.
@@ -28,7 +28,8 @@ templ Home() {
 		<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Bio</h3>
 		<p class="mt-6 leading-7">
 			I founded my first company at 18 through the
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="https://iventure.illinois.edu">
+			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={
+				templ.URL("https://iventure.illinois.edu") }>
 				iVenture Accelerator
 			</a> at Urbana-Champaign. There, I saw web
 			development as the
@@ -36,17 +37,17 @@ templ Home() {
 		</p>
 		<p class="mt-6 leading-7">
 			Beyond tech, I’m a writer and
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/artist">
+			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/artist") }>
 				full-stack producer and vocal artist
 			</a>.
 			I bring a multifaceted perspective and personal level of craft to everything I do.
 		</p>
 		<p class="mt-4 leading-7 text-sm text-[#8F7AA9] dark:text-[#C4A7E7]">
-			<a class="hover:underline" href="https://github.com/keshsad">GitHub</a> ◦
-			<a class="hover:underline" href="https://linkedin.com/in/rishikesh-sadanandan">LinkedIn</a> ◦
-			<a class="hover:underline" href="mailto:rishi@keshsad.com">Email</a> ◦
-			<a class="hover:underline" href="https://bsky.app/profile/keshsad.com">Bluesky</a> ◦
-			<a class="hover:underline" href="https://x.com/keshsad">X</a>
+			<a class="hover:underline" href={ templ.URL("https://github.com/keshsad") }>GitHub</a> ◦
+			<a class="hover:underline" href={ templ.URL("https://linkedin.com/in/rishikesh-sadanandan") }>LinkedIn</a> ◦
+			<a class="hover:underline" href={ templ.URL("mailto:rishi@keshsad.com") }>Email</a> ◦
+			<a class="hover:underline" href={ templ.URL("https://bsky.app/profile/keshsad.com") }>Bluesky</a> ◦
+			<a class="hover:underline" href={ templ.URL("https://x.com/keshsad") }>X</a>
 		</p>
 		<h3 class="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">Work</h3>
 		<p class="mt-6 leading-7">
@@ -55,7 +56,7 @@ templ Home() {
 		<p class="mt-6 leading-7"><b>Current</b></p>
 		<ul class="mt-4 ml-6 list-disc">
 			<li class="mt-2 ml-2">
-				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/meta">
+				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/meta") }>
 					My site and writing
 				</a>{ ` for early-stage companies and startups looking to hire` }
 				<svg id="go-light" class="inline align-middle ml-1 relative -top-[1.5px] dark:hidden"
@@ -125,7 +126,7 @@ templ Home() {
 				</svg>
 			</li>
 			<li class="mt-2 ml-2">
-				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/journal">
+				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/journal") }>
 					Journal app
 				</a> { `trained on ancient philosophy for modern knowledge workers` }
 				<svg id="expo-light" class="inline align-middle ml-1 relative -top-[1.5px] dark:hidden" height="0.9em"
@@ -188,38 +189,38 @@ templ Home() {
 		<p class="mt-6 leading-7"><b>Past</b></p>
 		<ul class="mt-4 ml-6 list-disc">
 			<li class="mt-2 ml-2">
-				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/poetic">
+				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/poetic") }>
 					Co-founded Poetic AI
 				</a>, a lyrical copilot helping artists overcome writer's block
 			</li>
 			<li class="mt-2 ml-2">
-				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/founder">
+				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/founder") }>
 					iV8
 				</a>, as a student-founder building Poetic
 			</li>
 			<li class="mt-2 ml-2">
-				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/fellow">
+				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/fellow") }>
 					iV9
 				</a>, on the leadership team stewarding events
 			</li>
 			<li class="mt-2 ml-2">
-				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/intern">
+				<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/intern") }>
 					AvidXchange
 				</a>, made an error intercepting sidesheet as a SWE intern
 			</li>
 		</ul>
 		<p class="mt-6 mb-10 leading-7">
 			I'm planning future ideas like a
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/college">
+			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/college") }>
 				college app
 			</a> to guide my sister to write essays, a
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/job">
+			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/job") }>
 				job manager
 			</a> to help my dad's company work faster, a
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/music">
+			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/music") }>
 				music app
 			</a> to empower keyboard-centric power users, and a
-			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href="/os">
+			<a class="text-[#57949F] dark:text-[#9CCFD8] hover:underline" href={ templ.URL("/os") }>
 				personal OS
 			</a>.
 		</p>
