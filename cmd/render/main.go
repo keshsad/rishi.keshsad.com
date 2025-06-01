@@ -20,6 +20,9 @@ func renderStaticFiles() {
 		"index.html": func(ctx context.Context, w *os.File) error {
 			return pages.Home().Render(ctx, w)
 		},
+		"artist.html": func(ctx context.Context, w *os.File) error {
+			return pages.Artist().Render(ctx, w)
+		},
 		// add more routes here
 	}
 
